@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body ng-app="WorldApp">
+
+<!-- Book Ctrl Starts -->
+<div ng-controller="BookCtrl" ng-init="getBookList()">
+
+<div ng-repeat="book in books">
+        <ul>
+            <li><p>{{book.title}} Type: {{book.type}} Price: {{book.price}}</p></li>
+        </ul>
+</div>
+
+</div>
+<!-- Book Ctrl Ends -->
+
+
+<!-- Third Party Libs -->
+<script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+<!-- <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script> -->
+
+<!-- App Specific Files -->
+<script type="text/javascript" src="app/app.js"></script>
+
+<!-- Providers -->
+
+<!-- Controllers -->
+<script type="text/javascript" src="app/controllers/BookCtrl.js"></script>
+
+</body>
+</html>
