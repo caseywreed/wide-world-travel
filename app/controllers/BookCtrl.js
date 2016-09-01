@@ -1,20 +1,14 @@
 "use strict";
 
-app.controller("BookCtrl", function ($scope, $q, $http) {
+app.controller("BookCtrl", function ($scope, GuideStorage) {
 
-    $scope.getBookList = () => {
-        console.log("Get book list running")
-        return $q((resolve, reject) => {
-            $http.get("../../data/guides.json")
-            .success((data) => {
-                $scope.books = data.guides;
-                resolve(data)
-            })
-            .error((error) => {
-                reject(error)
-            })
+    $scope.books = []
+
+    $scope.getBooksFromFactory = () => {
+        GuideStorage.getBookList()
+        .then(function (data) {
+            $scope.books = data.guides
         })
     }
-
 
 })

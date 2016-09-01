@@ -6,7 +6,7 @@
 <body ng-app="WorldApp">
 
 <!-- Book Ctrl Starts -->
-<div ng-controller="BookCtrl" ng-init="getBookList()">
+<div ng-controller="BookCtrl" ng-init="getBooksFromFactory()">
 
 <div ng-repeat="book in books">
         <ul>
@@ -28,7 +28,7 @@
 <script type="text/javascript" src="app/app.js"></script>
 
 <!-- Providers -->
-
+<script type="text/javascript" src="app/factories/GuideFactory.js"></script>
 <!-- Controllers -->
 <script type="text/javascript" src="app/controllers/BookCtrl.js"></script>
 
